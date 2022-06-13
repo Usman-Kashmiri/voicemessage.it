@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Helvetica";
+    src: url("../fonts/Helvetica-Bold.ttf") format("ttf"),
+      url("../fonts/helvetica-rounded-bold-5871d05ead8de.otf") format("otf"),
+      url("../fonts/Helvetica-BoldOblique.ttf") format("ttf"),
+      url("../fonts/helvetica-compressed-5871d14b6903a.otf") format("otf"),
+      url("../fonts/helvetica-light-587ebe5a59211.ttf") format("ttf"),
+      url("../fonts/Helvetica-Oblique.ttf") format("ttf"),
+      url("../fonts/Helvetica.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* Variables */
+
+:root {
+    /* Colors */
+    --skin: #FDF5DF;
+    --cyan: #5EBEC4;
+    --pink: #F92C85;
+    --grey: #787673;
+    --border-grey: #595959;
+    /* font-family */
+    --helvetica: 'Helvetica';
+}
+
+/* main */
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    /* background-image: url(Untitled.png); */
+    background-size: cover;
+    background-color: var(--skin);
+}
+
+/* header */
+
+.main .header span {
+    font-family: var(--helvetica);
+    font-weight: 600;
+    color: var(--grey);
+    font-size: .75rem;
+}
+
+.main .header .icon-logo {
+    width: 75px;
+    position: relative;
+    /* left: 2rem; */
+    transform: translateY(-25px);
+    -webkit-transform: translateY(-25px);
+    -moz-transform: translateY(-25px);
+    -ms-transform: translateY(-25px);
+    -o-transform: translateY(-25px);
+}
+
+.main .header .logo-container img {
+    width: 260px;
+    position: relative;
+}
+
+/* Select language */
+
+section h1,
+.text p {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--grey);
+    font-family: var(--helvetica);
+}
+
+section h1 {
+    width: fit-content;
+}
+
+.text p {
+    width: 350px;
+    text-align: justify;
+}
+
+.main .select-lang span {
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    clip-path: circle();
+}
+
+.main .select-lang img {
+    width: 100%;
+    height: 100%;
+}
+
+.disabled {
+    opacity: .4;
+}
+
+
+/* btns */
+.btns img {
+    cursor: pointer;
+}
+
+.btns .language-icon {
+    width: 65px;
+    clip-path: circle();
+    transform: translate(50px, 13px) rotate(16deg);
+    -webkit-transform: translate(50px, 13px) rotate(16deg);
+    -moz-transform: translate(50px, 13px) rotate(16deg);
+    -ms-transform: translate(50px, 13px) rotate(16deg);
+    -o-transform: translate(50px, 13px) rotate(16deg);
+}
+
+.btns .listening-btn {
+    width: 160px;
+}
+
+.btns .recording-btn {
+    width: 180px;
+    transform: translateY(-12px);
+    -webkit-transform: translateY(-12px);
+    -moz-transform: translateY(-12px);
+    -ms-transform: translateY(-12px);
+    -o-transform: translateY(-12px);
+}
+
+.text span {
+    font-size: 1.2rem;
+}
+
+/* Modal */
+
+section .modal-content {
+    background-color: var(--skin);
+    border: 6px solid var(--border-grey);
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+@media screen and (min-width: 576px) {
+    section .modal-dialog {
+        max-width: 340px;
+    }   
+}
+
+.modal-header .btn-close {
+    position: absolute;
+    right: -10px;
+    top: -8px;
+    background-color: var(--skin);
+    border-radius: 50%;
+    border: 6px solid var(--border-grey);
+    color: var(--border-grey);
+    font-size: 1.2rem;
+    padding: 1rem 1rem;
+    opacity: 1;
+    box-shadow: none;
+}
+
+.modal-footer a {
+    color: var(--border-grey);
+}
+
+/* Footer */
+
+.main .footer-container {
+    background-color: var(--grey);
+    width: 100%;
+}
+
+.footer-container .icons span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--skin);
+    height: 55px;
+    width: 55px;
+    font-size: 1.5rem;
+    color: var(--border-grey);
+    border: 4px solid var(--border-grey);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.footer-container .links a,
+.footer-container .links span {
+    text-decoration: none;
+    color: white;
+    font-size: .8rem;
+}

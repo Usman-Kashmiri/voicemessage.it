@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>voicemessage.it</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <main class="main d-flex flex-column justify-content-between align-items-center">
+        <header class="header pt-5 row justify-content-center align-items-center">
+            <div class="d-flex col-6 justify-content-center align-items-center">
+                <img class="icon-logo" src="assets/images/icon.png" alt="icon">
+                <div class="logo-container d-flex flex-column justify-content-center">
+                    <img src="assets/images/logo.png" alt="voicemessage">
+                    <span class="px-3">anonymous voice of Internet</span>
+                </div>
+            </div>
+        </header>
+        <section class="row align-items-center justify-content-center gap-5">
+            <div class="d-flex flex-column justify-content-center align-items-center btns">
+                <img class="language-icon" src="assets/images/Britan flag.png" title="English" alt="language icon">
+                <img class="listening-btn" src="assets/images/listening-btn.png" alt="istening button"
+                    data-bs-toggle="modal" data-bs-target="#listeningModal">
+                <!-- Recording Modal -->
+                <div class="modal fade" id="listeningModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer border-0 justify-content-center">
+                                <a class="text-decoration-none" href="#">Report abuse</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img class="recording-btn" src="assets/images/recording-btn.png" alt="recording button" data-bs-toggle="modal" data-bs-target="#recordingModal">
+            </div>
+            <div class="text col-6">
+                <p>Leave an anonymous message or listen audio notes from other people</p>
+            </div>
+        </section>
+        <footer class="footer-container p-3">
+            <div class="row justify-content-center">
+                <div class="icons pt-4 pb-2 d-flex justify-content-between col-3">
+                    <span><i class="fa fa-gift"></i></span>
+                    <span><i class="fa fa-share-nodes"></i></span>
+                    <span><i class="fa fa-earth"></i></span>
+                    <span><i class="fa fa-info"></i></span>
+                </div>
+            </div>
+            <div class="links">
+                <a href="#">Developed & Designed by Web Owls</a>
+                <span> | </span>
+                <a href="#">Contacts</a>
+            </div>
+        </footer>
+    </main>
+
+    <!-- JS -->
+    <!-- Jquery -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <!-- Jquery UI -->
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Fontawesome JS -->
+    <script src="assets/fontawesome/js/all.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
