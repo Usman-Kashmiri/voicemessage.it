@@ -154,6 +154,10 @@ section .modal-content {
     }   
 }
 
+.modal-backdrop {
+    background-color: transparent !important;
+ }
+
 .modal-header .btn-close {
     position: absolute;
     right: -10px;
