@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>voicemessage.it</title>
+     <!-- Favicon -->
+     <link rel="shortcut icon" href="assets/images/icon.png" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Fontawesome CSS -->
@@ -32,11 +34,14 @@
                 <img class="listening-btn" src="assets/images/listening-btn.png" alt="istening button"
                     data-bs-toggle="modal" data-bs-target="#listeningModal">
                 <!-- Listening Modal -->
-                <div class="modal fade" id="listeningModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
+                <div class="modal fade" id="listeningModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered justify-content-center">
                         <div class="modal-content">
                             <div class="modal-header border-0">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <span class="hashtag">#generic</span>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 ...
@@ -47,13 +52,16 @@
                         </div>
                     </div>
                 </div>
-                <img class="recording-btn" src="assets/images/recording-btn.png" alt="recording button" data-bs-toggle="modal" data-bs-target="#recordingModal">
+                <img class="recording-btn" src="assets/images/recording-btn.png" alt="recording button"
+                    data-bs-toggle="modal" data-bs-target="#recordingModal">
                 <!-- Recording Modal -->
-                <div class="modal fade" id="recordingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
+                <div class="modal fade" id="recordingModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered justify-content-center">
                         <div class="modal-content">
                             <div class="modal-header border-0">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 ...
@@ -69,13 +77,89 @@
                 <p>Leave an anonymous message or listen audio notes from other people</p>
             </div>
         </section>
+
+        <!-- footer -->
+
         <footer class="footer-container p-3">
             <div class="row justify-content-center">
                 <div class="icons pt-4 pb-2 d-flex justify-content-between col-3">
                     <span><i class="fa fa-gift"></i></span>
-                    <span><i class="fa fa-share-nodes"></i></span>
+                    <span class="link-share-btn"><i class="fa fa-share-nodes"></i></span>
                     <span><i class="fa fa-earth"></i></span>
-                    <span><i class="fa fa-info"></i></span>
+                    <span data-bs-toggle="modal" data-bs-target="#infoModal">
+                        <i class="fa fa-info"></i>
+                    </span>
+                    <!-- Information Modal -->
+                    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered justify-content-center">
+                            <div class="modal-content">
+                                <div class="modal-header border-0">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body scroll-y">
+                                    <h2>WHAT IS VOICEMESSAGES</h2>
+                                    <p>The ultimate goal of voicemessages is to collect the highest number of Internet
+                                        users’ voice messages in order to analyze their vocabulary and language level.
+                                        On voicemessages it is possible, for anyone in completely anonymously way, to
+                                        record a voice message (maximum 10 seconds) and contribute to the experiment.
+                                        To encourage people to record theirown voice, users can also listen audio files
+                                        recordered fron other users in a kind of immense «voice message machine». Once
+                                        a sufficient number of audio recordings are accumulated, they will be analyzed
+                                        by an artificial intelligence software, called SyntaxAI, capable of evaluating
+                                        the lexical level.
+                                        The AI algorithm, thanks to an inferential engine, Machine Learning and an
+                                        highly developed linguistic database, is ableto verify if the linguistic content
+                                        in the
+                                        audio follows the lexical-grammatical rules of common speech. To best simulate
+                                        common speech it was decided to leave anonymity for
+                                        audio recordings. Anonymity also allows users to express theirselfwith a higher
+                                        level of sincerity. In order to mitigate any illegal audio content, or not in
+                                        line with the rules of the
+                                        experiment, all audio files are analyzed by a BOT software capable of
+                                        identifying illicit content. Any file reported as illicitby any user is
+                                        automatically deleted by the
+                                        BOT. Every recorded message, once processed by SyntaxAI software, isdeleted from
+                                        the platform.
+                                    </p>
+                                    <h2>WHAT NOT TO DO</h2>
+                                    <p>
+                                        Defame, threaten, abuse, use intimidatory practices, threaten or violate the
+                                        rights of third parties
+                                        in any other way; promote activities that may endanger the lives of you or any
+                                        other User or cause physical harm. They are included in thiscategory, but
+                                        without any exclusion,
+                                        the threat of or incitement to suicide, the exaltation of intentional physical
+                                        trauma, the use of illegal drugs, alcohol abuse.
+                                        The publication of content that promotes, exalts or illustrates self-destructive
+                                        or violent attitudes on this Platform is not tolerated under any circumstances;
+                                        use this Platform
+                                        or its technologicalinfrastructure in an abusive, excessive or otherwise
+                                        inappropriate manner (for example: for spam purposes); disseminate
+                                        or publish illegal, obscene, illegitimate, defamatory or
+                                        inappropriate content; publish content that directly or indirectlypromotes
+                                        hatred, racism, discrimination, pornography or violence; disseminate
+                                        or publish false content or content thatmay cause undue alarm; use this Platform
+                                        to publish, disseminate
+                                        or otherwise offer content protected by intellectualproperty law, including, but
+                                        not limited to, patents, trademarks and copyright, without the permission of the
+                                        rightholder;
+                                        use this Platform to publish, disseminate or otherwise offer content that
+                                        infringes third party rights, including, but notlimited to, military or
+                                        commercial secrets, professional or
+                                        status and personal data; post content or perform activitiesthat disrupt,
+                                        disrupt, damage or otherwise violate the integrity of this Platform. These
+                                        include spamming,
+                                        the illicitdissemination of advertising and fraud against third parties.
+                                    </p>
+                                </div>
+                                <div class="modal-footer border-0 justify-content-center">
+                                    <!-- <a>Leave a message</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="links">

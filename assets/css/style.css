@@ -32,6 +32,10 @@
     --helvetica: 'Helvetica';
 }
 
+body {
+    font-family: var(--helvetica) !important;
+}
+
 /* main */
 
 .main {
@@ -46,7 +50,7 @@
 /* header */
 
 .main .header span {
-    font-family: var(--helvetica);
+    /* font-family: var(--helvetica); */
     font-weight: 600;
     color: var(--grey);
     font-size: .75rem;
@@ -75,7 +79,7 @@ section h1,
     font-weight: 600;
     font-size: 1.2rem;
     color: var(--grey);
-    font-family: var(--helvetica);
+    /* font-family: var(--helvetica); */
 }
 
 section h1 {
@@ -103,8 +107,8 @@ section h1 {
     opacity: .4;
 }
 
-
 /* btns */
+
 .btns img {
     cursor: pointer;
 }
@@ -112,11 +116,11 @@ section h1 {
 .btns .language-icon {
     width: 65px;
     clip-path: circle();
-    transform: translate(50px, 13px) rotate(16deg);
-    -webkit-transform: translate(50px, 13px) rotate(16deg);
-    -moz-transform: translate(50px, 13px) rotate(16deg);
-    -ms-transform: translate(50px, 13px) rotate(16deg);
-    -o-transform: translate(50px, 13px) rotate(16deg);
+    transform: translate(50px, 15px) rotate(16deg);
+    -webkit-transform: translate(50px, 15px) rotate(16deg);
+    -moz-transform: translate(50px, 15px) rotate(16deg);
+    -ms-transform: translate(50px, 15px) rotate(16deg);
+    -o-transform: translate(50px, 15px) rotate(16deg);
 }
 
 .btns .listening-btn {
@@ -138,7 +142,8 @@ section h1 {
 
 /* Modal */
 
-section .modal-content {
+section .modal-content,
+footer .modal-content {
     background-color: var(--skin);
     border: 6px solid var(--border-grey);
     border-radius: 12px;
@@ -149,7 +154,8 @@ section .modal-content {
 }
 
 @media screen and (min-width: 576px) {
-    section .modal-dialog {
+    section .modal-dialog,
+    footer .modal-content {
         max-width: 340px;
     }   
 }
@@ -158,22 +164,54 @@ section .modal-content {
     background-color: transparent !important;
  }
 
-.modal-header .btn-close {
+ .modal-header .btn-close {
     position: absolute;
-    right: -10px;
-    top: -8px;
+    right: -16px;
+    top: -15px;
     background-color: var(--skin);
     border-radius: 50%;
     border: 6px solid var(--border-grey);
     color: var(--border-grey);
     font-size: 1.2rem;
-    padding: 1rem 1rem;
+    padding: .8rem .8rem;
     opacity: 1;
     box-shadow: none;
+    z-index: 10;
 }
 
 .modal-footer a {
     color: var(--border-grey);
+}
+
+.modal-header span {
+    color: var(--grey);
+}
+
+.scroll-y {
+    overflow-y: scroll;
+    max-height: 460px;
+    margin: 30px 10px 10px;
+}
+
+.scroll-y::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scroll-y::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.scroll-y::-webkit-scrollbar-thumb {
+    background-color: #595959;
+}
+
+#infoModal .modal-content {
+    max-height: 500px;
+}
+
+#infoModal .modal-body h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
 }
 
 /* Footer */
