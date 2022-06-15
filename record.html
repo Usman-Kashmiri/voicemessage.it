@@ -44,7 +44,7 @@
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body d-flex flex-column align-items-center gap-3">
-                                <div class="play-pause-btn d-flex justify-content-center">
+                                <div class="pause-play-btn d-flex justify-content-center">
                                     <span class="d-flex justify-content-center align-items-center">
                                         <i id="pause-play-icon" class="fa fa-play"></i>
                                     </span>
@@ -87,23 +87,67 @@
                     <div class="modal-dialog modal-dialog-centered justify-content-center">
                         <div class="modal-content">
                             <div class="modal-header border-0">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
                             <div class="modal-body d-flex flex-column align-items-center gap-3">
-                                <div>
-                                    <button id="record-btn" class="record-btn d-flex flex-column justify-content-center align-items-center">
+                                <div class="playback">
+                                    <audio src="" id="audio-playback"></audio>
+                                </div>
+                                <div class="recording-modal-btns">
+                                    <button id="record-btn"
+                                        class="record-btn d-flex flex-column justify-content-center align-items-center">
                                         <svg class="progress-circle">
-                                            <circle class="progress" cx="50%" cy="50%" r="calc(50% - ( 1.25em / 2 ) )" />
+                                            <circle class="progress" cx="50%" cy="50%"
+                                                r="calc(50% - ( 1.25em / 2 ) )" />
                                         </svg>
                                         <span class="d-flex justify-content-center align-items-center">
                                             <i id="mic-icon" class="fa fa-microphone"></i>
                                         </span>
                                     </button>
-                                    <div class="playback">
-                                        <audio src="" id="audio-playback"></audio>
-                                    </div>
                                 </div>
                                 <span class="recording-duration"><span></span></span>
+                                <div id="recording-duration-and-visualizier">
+                                    <div class="visualizer d-flex justify-content-center">
+                                        <span class="bars d-flex justify-content-center align-items-center">
+                                            <span class="bar"></span>
+                                            <span class="bar"></span>
+                                            <span class="bar"></span>
+                                            <span class="bar"></span>
+                                            <span class="bar"></span>
+                                            <span class="bar"></span>
+                                            <span class="bar"></span>
+                                            <span class="bar"></span>
+                                            <span class="bar"></span>
+                                        </span>
+                                    </div>
+                                    <span id="recording-duration">0:00 / 0:00</span>
+                                </div>
+                                <div class="save-or-delete">
+                                    <div class="d-flex flex-column gap-3">
+                                        <div class="btns d-flex gap-2 justify-content-between">
+                                            <button id="save-btn" data-bs-toggle="modal"
+                                                data-bs-target="#thanksModal">Save</button>
+                                            <button id="delete-btn">Delete</button>
+                                        </div>
+                                        <input type="text" placeholder="insert one hashtag (optional)">
+                                    </div>
+                                    <div class="modal fade" id="thanksModal" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered justify-content-center">
+                                            <div class="modal-content">
+                                                <div class="modal-header border-0">
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body text-center">
+                                                    <h2>Thank you</h2>
+                                                    <span>Your audio was correctly uploaded</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="modal-footer border-0 justify-content-center">
                                 <p class="hide-msg">Leave a message</p>

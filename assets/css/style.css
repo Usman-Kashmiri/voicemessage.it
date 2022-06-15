@@ -155,7 +155,7 @@ footer .modal-content {
 @media screen and (min-width: 576px) {
     section .modal-dialog,
     footer .modal-content {
-        max-width: 300px;
+        max-width: 260px;
     }   
 }
 
@@ -213,7 +213,16 @@ footer .modal-content {
     font-weight: 700;
 }
 
-#listeningModal .modal-body .play-pause-btn span,
+#recordingModal .modal-content,
+#listeningModal .modal-content {
+    min-height: 450px;
+}
+
+#thanksModal .modal-content {
+    min-height: fit-content;
+}
+
+#listeningModal .modal-body .pause-play-btn span,
 #recordingModal .modal-body .record-btn span {
     cursor: pointer;
     width: 6.5rem;
@@ -231,11 +240,11 @@ footer .modal-content {
     -o-transition: all .5s;
 }
 
-#listeningModal .modal-body .play-pause-btn span {
+#listeningModal .modal-body .pause-play-btn span {
     background-color: var(--cyan);
 }
 
-#listeningModal .modal-body .play-pause-btn span,
+#listeningModal .modal-body .pause-play-btn span,
 #recordingModal .modal-body .record-btn {
     border: 10px solid var(--border-grey);
     border-radius: 50%;
@@ -253,9 +262,50 @@ footer .modal-content {
     color: white;
 }
 
-#listeningModal .modal-body .play-pause-btn span:hover {
+#listeningModal .modal-body .pause-play-btn span:hover {
     color: #00b0f0;
     background-color: #7af5ff;
+}
+
+#save-btn {
+    border: none;
+    color: white;
+    background-color: var(--border-grey);
+}
+
+#delete-btn,
+.save-or-delete input {
+    color: var(--border-grey);
+    background-color: transparent;
+    border: 4px solid var(--border-grey);
+}
+
+#save-btn,
+#delete-btn {
+    padding: 6px 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+#save-btn,
+#delete-btn,
+.save-or-delete input {
+    border-radius: 12px;
+    width: 100%;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+.save-or-delete input {
+    outline: none;
+    padding: 5px;
+}
+
+.save-or-delete input::placeholder {
+    font-size: .8rem;
+    color: var(--grey);
 }
 
 /* .visualizer {
