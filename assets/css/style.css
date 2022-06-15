@@ -213,6 +213,7 @@ footer .modal-content {
 
 #recordingModal .modal-content,
 #listeningModal .modal-content,
+#thanksModal .modal-content,
 footer .modal-content {
     max-width: 300px;
 }

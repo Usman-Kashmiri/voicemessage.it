@@ -42,12 +42,12 @@ $('.pause-play-btn').click(function() {
     //     $('#pause-play-icon').addClass('fa-play').removeClass('fa-pause');
     // }, 10000)
 })
+
+// var originalState = $("#recordingModal").html();
+
 const recordButton = document.getElementById("record-btn");
 
 const recording = document.getElementById("audio-playback");
-
-$('#recording-duration-and-visualizier').hide();
-$('.save-or-delete').hide();
 
 $('.record-btn').click(function() {
     recordButton.disabled = true
@@ -113,6 +113,7 @@ $('.record-btn').click(function() {
 
 $('#save-btn').click(function() { 
     $('#recordingModal').modal('hide');
+    // $("#recordingModal").html(originalState);
  })
 
 function stopRecording() {
