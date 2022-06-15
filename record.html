@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>voicemessage.it</title>
-     <!-- Favicon -->
-     <link rel="shortcut icon" href="assets/images/icon.png" type="image/x-icon">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/icon.png" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Fontawesome CSS -->
@@ -34,8 +34,8 @@
                 <img class="listening-btn" src="assets/images/listening-btn.png" alt="istening button"
                     data-bs-toggle="modal" data-bs-target="#listeningModal">
                 <!-- Listening Modal -->
-                <div class="modal fade" id="listeningModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
+                <div class="modal fade" id="listeningModal" data-bs-backdrop="static" tabindex="-1"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered justify-content-center">
                         <div class="modal-content">
                             <div class="modal-header border-0">
@@ -43,8 +43,35 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
-                            <div class="modal-body">
-                                ...
+                            <div class="modal-body d-flex flex-column align-items-center gap-3">
+                                <div class="play-pause-btn d-flex justify-content-center">
+                                    <span class="d-flex justify-content-center align-items-center">
+                                        <i id="pause-play-icon" class="fa fa-play"></i>
+                                    </span>
+                                    <audio id="recording" src="assets/recordings/sample.mp3"></audio>
+                                </div>
+                                <div class="visualizer d-flex justify-content-center">
+                                    <span class="bars d-flex justify-content-center align-items-center">
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                        <!-- <svg width="85" height="65" viewBox="-10 -10 120 120">
+                                            <mask id="svg_mask">
+                                                <rect width="85" height="65" fill="black" />
+                                            </mask>
+                                        </svg> -->
+                                    </span>
+                                </div>
+                                <span id="duration">0:00 / 0:00</span>
+                                <span class="posted-time">
+                                    < 1 min ago</span>
+                                        <button class="skip-btn border-0 bg-transparent">skip audio</button>
                             </div>
                             <div class="modal-footer border-0 justify-content-center">
                                 <a class="text-decoration-none" href="#">Report abuse</a>
@@ -55,19 +82,31 @@
                 <img class="recording-btn" src="assets/images/recording-btn.png" alt="recording button"
                     data-bs-toggle="modal" data-bs-target="#recordingModal">
                 <!-- Recording Modal -->
-                <div class="modal fade" id="recordingModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
+                <div class="modal fade" id="recordingModal" data-bs-backdrop="static" tabindex="-1"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered justify-content-center">
                         <div class="modal-content">
                             <div class="modal-header border-0">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class="modal-body">
-                                ...
+                            <div class="modal-body d-flex flex-column align-items-center gap-3">
+                                <div>
+                                    <button id="record-btn" class="record-btn d-flex flex-column justify-content-center align-items-center">
+                                        <svg class="progress-circle">
+                                            <circle class="progress" cx="50%" cy="50%" r="calc(50% - ( 1.25em / 2 ) )" />
+                                        </svg>
+                                        <span class="d-flex justify-content-center align-items-center">
+                                            <i id="mic-icon" class="fa fa-microphone"></i>
+                                        </span>
+                                    </button>
+                                    <div class="playback">
+                                        <audio src="" id="audio-playback"></audio>
+                                    </div>
+                                </div>
+                                <span class="recording-duration"><span></span></span>
                             </div>
                             <div class="modal-footer border-0 justify-content-center">
-                                <a>Leave a message</a>
+                                <p class="hide-msg">Leave a message</p>
                             </div>
                         </div>
                     </div>
@@ -179,6 +218,8 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- Fontawesome JS -->
     <script src="assets/fontawesome/js/all.min.js"></script>
+    <!-- Counter JS -->
+    <script src="assets/js/counter.js"></script>
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
 </body>

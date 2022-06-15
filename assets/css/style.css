@@ -59,7 +59,6 @@ body {
 .main .header .icon-logo {
     width: 75px;
     position: relative;
-    /* left: 2rem; */
     transform: translateY(-25px);
     -webkit-transform: translateY(-25px);
     -moz-transform: translateY(-25px);
@@ -156,7 +155,7 @@ footer .modal-content {
 @media screen and (min-width: 576px) {
     section .modal-dialog,
     footer .modal-content {
-        max-width: 340px;
+        max-width: 300px;
     }   
 }
 
@@ -212,6 +211,180 @@ footer .modal-content {
 #infoModal .modal-body h2 {
     font-size: 1.25rem;
     font-weight: 700;
+}
+
+#listeningModal .modal-body .play-pause-btn span,
+#recordingModal .modal-body .record-btn span {
+    cursor: pointer;
+    width: 6.5rem;
+    height: 6.5rem;
+    font-size: 2.5rem;
+    transition: all .5s;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+
+#listeningModal .modal-body .play-pause-btn span {
+    background-color: var(--cyan);
+}
+
+#listeningModal .modal-body .play-pause-btn span,
+#recordingModal .modal-body .record-btn {
+    border: 10px solid var(--border-grey);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+#recordingModal .modal-body .record-btn {
+   background-color: var(--pink);
+}
+
+#recordingModal .modal-body .record-btn span {
+    color: white;
+}
+
+#listeningModal .modal-body .play-pause-btn span:hover {
+    color: #00b0f0;
+    background-color: #7af5ff;
+}
+
+/* .visualizer {
+    padding: 2rem 0;
+} */
+
+.bars {
+    column-gap: 4px;
+    /* background-color: var(--skin); */
+    z-index: 0;
+}
+
+.bar {
+    display: inline-flex;
+    background-color: #d9d9d9;
+    mix-blend-mode: darken;
+    width: 6px;
+}
+  .bar:first-child {
+    height: 20px;
+  }
+  .bar:nth-child(2) {
+    height: 36px;
+  }
+  .bar:nth-child(3) {
+    height: 46px;
+  }
+  .bar:nth-child(4) {
+    height: 62px;
+  }
+  .bar:nth-child(5) {
+    height: 38px;
+  }
+  .bar:nth-child(6) {
+    height: 30px;
+  }
+  .bar:nth-child(7) {
+    height: 20px;
+  }
+  .bar:nth-child(8) {
+    height: 32px;
+  }
+  .bar:nth-child(9) {
+    height: 20px;
+  }
+  .bars svg {
+    position: absolute;
+    z-index: 2;
+  }
+  .bars svg,
+  .bars svg rect {
+    width: 85px;
+    height: 65px;
+  }
+  .bars svg rect {
+   fill: black;
+  }
+  /* @-webkit-keyframes sound {
+    0% {
+      opacity: 0.35;
+      height: 3px;
+    }
+    100% {
+      opacity: 1;
+      height: 24px;
+    }
+  }
+  @keyframes sound {
+    0% {
+      opacity: 0.35;
+      height: 3px;
+    }
+    100% {
+      opacity: 1;
+      height: 24px;
+    }
+  } */
+
+/* Recording btn */
+
+#recordingModal {
+    --canvas-width: 8rem;
+    --radius: calc(50% - ( 1.25em / 2 ) );
+    --pi: 3.14159265358979;
+    --circumference: calc( 2 * var(--radius) * var(--pi) );
+    --degconst: var(--circumference) / 360;
+    --initial: 50; /* 0 - 360 */
+    --target: 300; /* 0 - 360 */
+    --speed: 0.27; /* 0 - 1 */ 
+    --deltaPos: calc( var(--target) - var(--initial) ); /* Use if target > initial */
+    --deltaNeg: calc( var(--initial) - var(--target) ); /* Use if target < initial */
+    --animation-duration: calc( ( 1 / var(--speed) * 500ms ) + ( var(--deltaPos) / 360 ) * ( 1 / var(--speed) * 500ms ))
+  }
+  
+#recordingModal .record-btn .progress-circle {
+    position: absolute;
+    transform: rotate(-90deg);
+    width: var(--canvas-width);
+    aspect-ratio: 1;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+}
+  
+  .progress {
+    stroke: white;
+    stroke-width: 7px;
+    fill: transparent;
+    stroke-dasharray: var(--circumference);
+    stroke-dashoffset: calc( ( 360 ) * var(--degconst) );
+    /*stroke-linecap: round; */
+    }
+  
+.recording-animation {
+    animation: progress 10.5s ease forwards 1;
+    -webkit-animation: progress 10.5s ease forwards 1;
+}
+
+  @keyframes progress {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .recording-duration {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--border-grey);
 }
 
 /* Footer */
