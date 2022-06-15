@@ -112,7 +112,7 @@ $('.record-btn').click(function() {
 })
 
 $('#save-btn').click(function() { 
-    $('#recordingModal').stopPropagation();
+    $('#recordingModal').modal('hide');
  })
 
 function stopRecording() {

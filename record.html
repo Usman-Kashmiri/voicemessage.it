@@ -132,21 +132,6 @@
                                         </div>
                                         <input type="text" placeholder="insert one hashtag (optional)">
                                     </div>
-                                    <div class="modal fade" id="thanksModal" tabindex="-1"
-                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered justify-content-center">
-                                            <div class="modal-content">
-                                                <div class="modal-header border-0">
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body text-center">
-                                                    <h2>Thank you</h2>
-                                                    <span>Your audio was correctly uploaded</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <div class="modal-footer border-0 justify-content-center">
@@ -155,8 +140,23 @@
                         </div>
                     </div>
                 </div>
+                <div class="modal fade" id="thanksModal" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered justify-content-center">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <h2>Thank you</h2>
+                            <span>Your audio was correctly uploaded...!</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="text col-6">
+            </div>
+            <div class="text col-md-6 col-10">
                 <p>Leave an anonymous message or listen audio notes from other people</p>
             </div>
         </section>
@@ -165,7 +165,7 @@
 
         <footer class="footer-container p-3">
             <div class="row justify-content-center">
-                <div class="icons pt-4 pb-2 d-flex justify-content-between col-3">
+                <div class="icons pt-4 pb-2 d-flex justify-content-between col-lg-3 col-8">
                     <span><i class="fa fa-gift"></i></span>
                     <span class="link-share-btn"><i class="fa fa-share-nodes"></i></span>
                     <span><i class="fa fa-earth"></i></span>
@@ -245,7 +245,7 @@
                     </div>
                 </div>
             </div>
-            <div class="links">
+            <div class="links d-md-block d-none">
                 <a href="#">Developed & Designed by Web Owls</a>
                 <span> | </span>
                 <a href="#">Contacts</a>
